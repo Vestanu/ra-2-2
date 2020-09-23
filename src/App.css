@@ -1,38 +1,86 @@
-.App {
-  text-align: center;
-}
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+#root {
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
   }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  
+  .set-view {
+    text-align: end;
   }
-  to {
-    transform: rotate(360deg);
+  
+  .cards-view {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
   }
-}
+  
+  .material-icons {
+    cursor: pointer;
+  }
+  
+  .cards-view .item {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 260px;
+    height: 260px;
+    box-shadow: 0 0 6px 0 rgba(0,0,0,.04), 0 4px 10px 0 rgba(13,35,67,.25);
+    margin-bottom: 40px;
+    text-transform: uppercase;
+  }
+  
+  .cards-view img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: -1;
+  }
+  
+  .cards-view .item-bottom {
+    position: absolute;
+    bottom: 10px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    color: #ac2e2e;
+  }
+  
+  .cards-view .button, .list-view .button {
+    border: 1px solid;
+    border-radius: 20px;
+    padding: 5px 10px;
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+  
+  .list-view .button {
+    margin-right: 10px;
+  }
+  
+  .list-view .item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 50px;
+    overflow: hidden;
+    background-color: #ffffff;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+  }
+  
+  .list-view img {
+    height: 75px;
+    margin-left: 10px;
+  }
+  
+  .list-view .name {
+    margin: 0;
+  }
+  
+  .list-view .price, .list-view .button {
+    color: #ac2e2e;
+  }
